@@ -4,13 +4,13 @@ ssh driver for test-kitchen for any running server with an ip address
 
 * server must be created and destroyed natively (e.g. via cloud or virtualization console).
 * specify driver parameters
-         hostname
-         port
-         username
-         password
-         sudo
-         ssh_key
-         forward_agent
+  hostname
+  port
+  username
+  password
+  sudo
+  ssh_key
+  forward_agent
 
 ## Installation
 
