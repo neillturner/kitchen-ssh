@@ -13,7 +13,7 @@ module Kitchen
          state[:hostname] = config[:hostname]
          state[:password] = config[:password]
          wait_for_sshd(state[:hostname], state[:username])
-         print '(ssh ready)\n'
+         print '(ssh ready) on host #{state[:hostname]} with user #{state[:username]}\n'
          debug("ssh:create '#{state[:hostname]}'")
        end
 
