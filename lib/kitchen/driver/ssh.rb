@@ -12,13 +12,15 @@ module Kitchen
          state[:username] = config[:username]
          state[:hostname] = config[:hostname]
          state[:password] = config[:password]
+         print "Kitchen-ssh does not start your server '#{state[:hostname]}' but will look for an ssh connection with user '#{state[:username]}'"
          wait_for_sshd(state[:hostname], state[:username])
-         print '(ssh ready) on host #{state[:hostname]} with user #{state[:username]}\n'
+         print "Kitchen-ssh found ssh ready on host '#{state[:hostname]}' with user '#{state[:username]}'\n"
          debug("ssh:create '#{state[:hostname]}'")
        end
 
        def destroy(state)
-         print 'To destroy server shut down the server natively.\n'
+         print "Kitchen-ssh does not destroy your server '#{state[:hostname]}' by shutting it down..."
+         print "Shutdown your server '#{state[:hostname]}' natively with user '#{state[:username]}'"
          print 'in your cloud or virtualisation console etc.\n'
          debug("ssh:destroy '#{state[:hostname]}'")
        end
