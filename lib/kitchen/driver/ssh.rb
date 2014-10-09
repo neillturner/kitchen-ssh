@@ -13,7 +13,7 @@ module Kitchen
          state[:hostname] = config[:hostname]
          state[:password] = config[:password]
          print "Kitchen-ssh does not start your server '#{state[:hostname]}' but will look for an ssh connection with user '#{state[:username]}'"
-         wait_for_sshd(state[:hostname], state[:username])
+         wait_for_sshd(state[:hostname], state[:username], {:port => state[:port]})
          print "Kitchen-ssh found ssh ready on host '#{state[:hostname]}' with user '#{state[:username]}'\n"
          debug("ssh:create '#{state[:hostname]}'")
        end
