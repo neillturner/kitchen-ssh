@@ -12,6 +12,10 @@ specify driver parameters
 *  ssh_key
 *  forward_agent
 
+There is also a second driver called ssh_gzip that will also gzip file before transfer which can provide 
+a big performance improvement when alot of files are transfered.
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -28,5 +32,5 @@ Or install it yourself as:
 
 ## Usage
 
-In your .kitchen.yml file set driver to be 'ssh'
+In your .kitchen.yml file set driver to be 'ssh' or 'ssh_gzip'.
 
