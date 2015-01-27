@@ -34,3 +34,14 @@ Or install it yourself as:
 
 In your .kitchen.yml file set driver to be 'ssh' or 'ssh_gzip'.
 
+##Example
+
+```yaml
+---
+driver:
+  name: ssh
+  hostname: your-ip
+  port: 22
+  username: username 
+  ssh_key: /path/to/id_rsa
+```
