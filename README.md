@@ -1,6 +1,9 @@
 # kitchen-ssh
 
-ssh driver for test-kitchen for any running server with an ip address
+ssh ssh_gzip driver for test-kitchen for any running server with an ip address
+
+*** As well as ssh it supports a second driver called ssh_gzip that will also gzip file before transfer which can provide 
+a big performance improvement when alot of files are transfered. ****
 
 server must be created and destroyed natively (e.g. via cloud or virtualization console).
 specify driver parameters
@@ -12,8 +15,7 @@ specify driver parameters
 *  ssh_key
 *  forward_agent
 
-There is also a second driver called ssh_gzip that will also gzip file before transfer which can provide 
-a big performance improvement when alot of files are transfered.
+
 
 
 ## Installation
