@@ -28,7 +28,7 @@ module Kitchen
     # * #destroy(state)
     #
     # @author Fletcher Nichol <fnichol@nichol.ca>
-    class SSHBaseGzip < Base
+    class SSHBaseGzip < Kitchen::Driver::SSHBase
 
       default_config :sudo,             true
       default_config :port,             22

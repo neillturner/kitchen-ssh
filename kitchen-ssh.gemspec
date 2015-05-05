@@ -10,20 +10,17 @@ Gem::Specification.new do |s|
   s.email         = ["neillwturner@gmail.com"]
   s.homepage      = "https://github.com/neillturner/kitchen-ssh"
   s.add_dependency('minitar', '~> 0.5')
-  s.summary       = "ssh driver for test-kitchen for any running server with an ip address"
+  s.summary       = "ssh and ssh_gzip driver for test-kitchen for any running server with an ip address"
   candidates = Dir.glob("{lib}/**/*") +  ['README.md', 'LICENSE.txt', 'kitchen-ssh.gemspec']
   s.files = candidates.sort
   s.platform      = Gem::Platform::RUBY
   s.require_paths = ['lib']
   s.rubyforge_project = '[none]'
   s.description = <<-EOF
-== DESCRIPTION:
+ssh and ssh_gzip driver for test-kitchen for any running server with an ip address
 
-ssh driver for test-kitchen for any running server with an ip address
-
-== FEATURES:
-
-ssh driver for test-kitchen for any running server with an ip address
+*** As well as ssh it supports a second driver called ssh_gzip that will also gzip file before transfer which can provide 
+a big performance improvement when alot of files are transfered. ****
 
 EOF
 
