@@ -1,9 +1,9 @@
 require 'kitchen'
-require 'kitchen/driver/base'
+require 'kitchen/driver/ssh_base'
 
 module Kitchen
   module Driver
-    class Ssh < Base
+    class Ssh < SSHBase
        def create(state)
          state[:sudo] = config[:sudo]
          state[:port] = config[:port]
