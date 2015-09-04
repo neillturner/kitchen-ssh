@@ -5,7 +5,7 @@ ssh and ssh_gzip driver for test-kitchen for any running server with an ip addre
 As well as ssh it supports a second driver called ssh_gzip that will also gzip file before transfer which can provide 
 a big performance improvement when alot of files are transfered. 
 
-server must be created and destroyed natively (e.g. via cloud or virtualization console).
+server must be created and destroyed natively (e.g. via cloudformation, heat, or cloud or virtualization console).
 specify driver parameters
 *  hostname
 *  port
