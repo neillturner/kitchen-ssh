@@ -60,3 +60,16 @@ driver:
   username: username 
   ssh_key: /path/to/id_rsa
 ```
+
+### Bastion Host
+
+If you use a bastion host, add the following lines:
+
+```yaml
+transport:
+  name: ssh
+  ssh_gateway: bastion-ip
+  ssh_gateway_username: bastion-user
+```
+
+Alternatively add `ProxyCommand ssh -W %h:%p bastion-user@bastion-ip` to your `ssh_config(5)`
