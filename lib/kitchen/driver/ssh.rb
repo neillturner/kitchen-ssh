@@ -21,7 +21,7 @@ module Kitchen
        def destroy(state)
          print "Kitchen-ssh does not destroy your server '#{state[:hostname]}' by shutting it down..."
          print "Shutdown your server '#{state[:hostname]}' natively with user '#{state[:username]}'"
-         print 'in your cloud or virtualisation console etc.\n'
+         print 'in your cloud or virtualisation console etc.'
          debug("ssh:destroy '#{state[:hostname]}'")
        end
 
