@@ -73,3 +73,7 @@ transport:
 ```
 
 Alternatively add `ProxyCommand ssh -W %h:%p bastion-user@bastion-ip` to your `ssh_config(5)`
+
+## Tips
+
+If you get a hang while running kitchen-ssh with a non-root user check that the user was not set to be NOPASSWORD in the sudoer file either. So it hang there waiting for input of the password prompted. After changing the user and key to be root in the .kitchen.yml file, everything worked.
