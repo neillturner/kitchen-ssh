@@ -8,7 +8,7 @@ module Kitchen
          state[:sudo] = config[:sudo]
          state[:port] = config[:port]
          state[:ssh_key] = config[:ssh_key]
-         state[:forward_agent] = config[:forward_agent] if config[:forward_agent]?
+         state[:forward_agent] = config[:forward_agent] if config[:forward_agent]
          state[:username] = config[:username]
          state[:hostname] = config[:hostname]
          state[:password] = config[:password] if config[:password]?
