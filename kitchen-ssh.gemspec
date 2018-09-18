@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors       = ["Neill Turner"]
   s.email         = ["neillwturner@gmail.com"]
   s.homepage      = "https://github.com/neillturner/kitchen-ssh"
-  s.add_dependency('minitar', '~> 0.5')
+  s.add_dependency('minitar', '~> 0.6')
   s.summary       = "ssh and ssh_gzip driver for test-kitchen for any running server with an ip address"
   candidates = Dir.glob("{lib}/**/*") +  ['README.md', 'LICENSE.txt', 'kitchen-ssh.gemspec', 'Gemfile']
   s.files = candidates.sort
