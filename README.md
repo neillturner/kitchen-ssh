@@ -15,8 +15,11 @@ specify driver parameters
 *  ssh_key
 *  forward_agent
 
-NOTE: ssh driver is compatibile with test-kitchen 1.4 while ssh_gzip has legacy driver compatiability 
-with test-kitchen 1.4 
+## Usage Recommendation ##
+For a bit of history this kitchen ssh driver was originally written so that server created  separately (in my case EC2 instances created by cloud formation) could have repeated runs of test kitchen provisioner. 
+I also added gzip support to massively speed up the time it took to copy all the config files to the instance. Since writing this some other solutions how been written that might suit you better: 
+* proxy driver in test-kitchen that proxies commands through to a test instance whose lifecycle is not managed by Test Kitchen.     
+* kitchen-sync plugin has been written that also massively improves performance but by just sync the changes to config files instead of zipping them up.    
 
 
 ## Installation
